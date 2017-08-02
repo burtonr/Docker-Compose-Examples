@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  cli: 
+    container_name: cli-qa-demo
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    command: ["printer"]
+    env_file: .env
+    environment:
+      TEST_ENV_ITEM: "QA Compose"

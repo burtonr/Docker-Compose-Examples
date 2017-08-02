@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  cli: 
+    container_name: cli-stage-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["printer"]
+    environment:
+      TEST_ENV_ITEM: "Staging in root"
+    env_file: ./env/stage

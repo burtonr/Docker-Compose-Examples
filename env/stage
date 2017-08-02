@@ -1,0 +1,2 @@
+TEST_ENV_ITEM=This gets overidden by the compose file
+ANOTHER_ENV_ITEM=This is from the stage environment file

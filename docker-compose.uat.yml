@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  uat-cli: 
+    extends: 
+      file: docker-compose.yml
+      service: cli
+    container_name: cli-uat
+    environment:
+      TEST_ENV_ITEM: "UAT in root"
+      PROD_ENV_ITEM: "Value in UAT compose"
+  uat-cli-2:
+    extends: uat-cli
+    container_name: uat-2
+    environment:
+      TEST_ENV_ITEM: "UAT 2"
+      ANOTHER_ENV_ITEM: "The extended additional service"

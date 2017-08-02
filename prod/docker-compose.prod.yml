@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  cli-2:
+    container_name: cli-2
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: ["printer"]
+    env_file: .env
+    environment:
+      TEST_ENV_ITEM: "Environment in compose"
+      PROD_ENV_ITEM: "Value in PROD compose 2nd service"
